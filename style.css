@@ -1,0 +1,29 @@
+:root {
+
+}
+
+body {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+#labirint-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.labirintWall {
+    background-color: black;
+}
+
+.labirintBegin {
+    background-color: aqua;
+}
+
+.labirintEnd {
+    background-color: red;
+}
+
+.labirintSpace {
+    background-color: yellowgreen;
+}
