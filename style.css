@@ -7,11 +7,31 @@
     --labirint-floor-image: url(img/floor.png);
     --labirint-player-image: url(img/player.png);
     --labirint-end-image: url(img/start-flag.png);
+    --medieval-font: 'MedievalSharp';
+    --bg-color: gray;
+}
+
+html {
+    font-family: var(--medieval-font);
+    font-size: 16px;
+    background-color: var(--bg-color);
 }
 
 body {
     width: 1200px;
     margin: 0px auto;
+}
+
+header {
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 3rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #labirint-section {
@@ -49,4 +69,14 @@ body {
     height: 100%;
     background-image: var(--labirint-player-image);
     background-size: contain;
+}
+
+#victory {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none;
 }

@@ -16,7 +16,7 @@ const map = [
     "WWWWWWWWWWWWWWWWWWWWW",
 ]
 
-const labirintSize = 750
+const labirintSize = 1000
 const labirintHeight = (labirintSize*71.4285714)/100
 let divWidth = labirintSize/21
 let divHeight = labirintSize/21
@@ -24,6 +24,8 @@ let divHeight = labirintSize/21
 const labirintSection = document.querySelector('#labirint-section')
 labirintSection.style.width = `${labirintSize}px`
 labirintSection.style.height = `${labirintHeight}px`
+
+const victory = document.querySelector('#victory')
 
 
 const createLabirint = () => {
@@ -110,6 +112,7 @@ const movePlayerBox = () => {
             if (map[lin][col-1] === ' '){
                 document.querySelector(`#div${lin}-${col-1}`).appendChild(player)
                 position = `${lin}-${col-1}`
+                victory.classList.add('hidden')
             }
         }
 
@@ -124,7 +127,7 @@ const movePlayerBox = () => {
             if (map[lin][col+1] === 'F'){
                 document.querySelector(`#div${lin}-${col+1}`).appendChild(player)
                 position = `${lin}-${col+1}`
-                document.querySelector('#result').innerHTML = 'You Win!'
+                victory.classList.remove('hidden')
             }
         }
     })
