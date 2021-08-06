@@ -4,6 +4,9 @@
     --labirint-end-color: red;
     --labirint-floor-color: aqua;
     --labirint-player-color: purple;
+    --labirint-floor-image: url(img/floor.png);
+    --labirint-player-image: url(img/player.png);
+    --labirint-end-image: url(img/start-flag.png);
 }
 
 body {
@@ -26,14 +29,17 @@ body {
 }
 
 .labirintEnd {
-    background-color: var(--labirint-end-color);
+    background-image: var(--labirint-end-image);
+    background-size: contain;
 }
 
 .labirintFloor {
-    background-color: var(--labirint-floor-color);
+    background-image: var(--labirint-floor-image);
+    background-size: contain;
 }
 
 #player-box {
     position: absolute;
-    background-color: var(--labirint-player-color);
+    background-image: var(--labirint-player-image);
+    background-size: contain;
 }
