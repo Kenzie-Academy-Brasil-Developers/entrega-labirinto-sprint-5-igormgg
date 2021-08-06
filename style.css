@@ -1,5 +1,9 @@
 :root {
-
+    --labirint-wall-color: black;
+    --labirint-start-color: green;
+    --labirint-end-color: red;
+    --labirint-floor-color: aqua;
+    --labirint-player-color: purple;
 }
 
 body {
@@ -8,22 +12,28 @@ body {
 }
 
 #labirint-section {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
 }
 
 .labirintWall {
-    background-color: black;
+    background-color: var(--labirint-wall-color);
 }
 
 .labirintBegin {
-    background-color: aqua;
+    background-color: var(--labirint-start-color);
 }
 
 .labirintEnd {
-    background-color: red;
+    background-color: var(--labirint-end-color);
 }
 
-.labirintSpace {
-    background-color: yellowgreen;
+.labirintFloor {
+    background-color: var(--labirint-floor-color);
+}
+
+#player-box {
+    position: absolute;
+    background-color: var(--labirint-player-color);
 }
